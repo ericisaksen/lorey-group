@@ -1,0 +1,49 @@
+---
+{
+  "title": "Our Approach",
+  "process": [
+    {
+      "title": "<span>Step 1</span> Understanding",
+      "content": "<p>Our relationship with you, and the process for securing your family’s future, begins with understanding the things that are important to you. So, we begin our process by discovering just that.</p>",
+      "icon": "handshake"
+    },
+    {
+      "title": "<span>Step 2</span> Analyzing",
+      "content": "<p>We will work with you and your other advisors to analyze the impact of state and federal taxes on your estate and suggest strategies to help minimize those taxes, while meeting your personal philosophies and family needs.</p>",
+      "even": true,
+      "icon": "chart-network"
+    },
+    {
+      "title": "<span>Step 3</span> Exploring",
+      "content": "<p>After gaining an understanding of your financial situation, we help to crystalize your goals and objectives.</p>",
+      "icon": "telescope"
+    },
+    {
+      "title": "<span>Step 4</span> Collaborating",
+      "content": "<p>We explore possible strategies to achieve your goals, collaborate with your circle of advisors, and can then help you implement and follow up on your course of action.</p>",
+      "even": true,
+      "icon": "users-viewfinder"
+    },
+    {
+      "title": "<span>Step 5</span> Monitoring",
+      "content": "<p>At this stage, we will monitor your financial situation to ensure that your strategy stays aligned with your goals and objectives.</p>",
+      "icon": "file-magnifying-glass"
+    }
+  ]
+}
+---
+<div class="pam-flex jc">
+  <div class="pam-large-12 pam-columns">
+    {{ range $i, $s := .page.process }}
+      <div class="pam-process-section{{ if $s.even }} is-even{{ end }}">
+        <div class="process-title-container">
+          <i class="lmg-fal lmg-fa-{{ $s.icon }}"><label>.</label></i>
+          <h2>{{ $s.title }}</h2>
+        </div>
+        <div class="process-content-container">
+          {{ $s.content }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>

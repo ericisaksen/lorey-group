@@ -1,0 +1,58 @@
+---
+{
+  "title": "Investment Solutions",
+  "topSec": [
+    {
+      "title": "Investment Advisory",
+      "content": "<p>Managing your wealth requires a clear understanding of your overall investment objectives. Eagle's comprehensive investment advisory capabilities utilize a disciplined investment approach that looks beyond traditional asset allocation, while addressing important factors such as risk tolerance levels and investment time horizons, to provide a clearer picture of our clients’ overall wealth.</p>"
+    },
+    {
+      "title": "Financial Planning",
+      "content": "<p>A comprehensive financial analysis of assets, liabilities, cash flow, and investments helps us identify a clear path to our clients’ prosperous futures. We’ll craft a detailed financial plan that helps you have the right wealth accumulation and preservation strategy in place to achieve your long-term investment objectives. More importantly, we continuously monitor and adjust our clients’ financial plans to ensure that they remain aligned with their stated objectives.</p>"
+    },
+    {
+      "title": "Investment Advisory Services Offerings",
+      "sub_content": [
+        {
+          "title": "Fund Advisory Program",
+          "content": "<p>This program combines the expertise of professional third party investment managers with the personalized service and guidance of the Financial Advisor. By analyzing your overall investment goals, risk tolerance levels, and liquidity needs, we’ll help you determine which investment portfolio allocation, consisting of an optimal blend of nonproprietary mutual funds and/or exchange-traded funds (ETFs) is most appropriate for your investment goals and specific situation.</p>"
+        },
+        {
+          "title": "Separately Managed Accounts",
+          "content": "<p>Separately Managed Accounts (&ldquo;SMAs&ldquo;) are a type of professionally managed investment accounts that invest in individual securities on a discretionary basis and provide clients with the flexibility of restricting the holdings of certain securities and tactically utilizing gains and losses for tax planning purposes. We will leverage Eagle’s robust offering of nonproprietary SMA strategies available through third-party money managers to either custom design a holistic investment portfolio or utilize individual strategies to address your specific allocation needs.</p>"
+        },
+        {
+          "title": "Rep Directed Program",
+          "content": "<p>This is an investment advisory program through which we will construct a customized portfolio of individual mutual funds, exchange traded funds (ETFs), and in some cases, individual securities, using the strategic asset allocation framework developed by Eagle Strategies and a leading institutional asset manager, or simply by us for you to review and approve.  We’ll seek to utilize an optimal blend of asset classes that helps maximize long-term returns, manage overall portfolio volatility and pursue investment objectives while remaining aligned with your risk profile.</p>"
+        }
+      ]
+    }
+  ]
+}
+---
+<div class="pam-section no-border mb-100">
+  <p>Eagle Strategies LLC, is a Registered Investment Adviser and an indirect, wholly owned subsidiary of New York Life Insurance Company, and is a provider of holistic investment advisory and financial planning services. Our financial advisors leverage Eagle’s sophisticated wealth management platform, comprised of many of today’s leading investment managers, to design customized investment solutions to help address their clients’ unique investment objectives and risk tolerance levels.  The breadth of investment knowledge of our Financial Advisors, coupled with the support of Eagle’s diverse team of investment experts, allows them to provide the continuous financial guidance needed to help clients achieve long-term financial success.</p>
+</div>
+
+{{ range $i, $t := .page.topSec }}
+  <div class="services-section mb-50">
+    <div class="services-title-container">
+      <h2>{{ $t.title }}</h2>
+    </div>
+    <div class="services-content-container">
+      {{ $t.content }}
+      {{ if $t.sub_content }}
+      {{ range $i, $sc := $t.sub_content }}
+      <div class="pam-sub-section">
+        <h3>{{ $sc.title }}</h3>
+        {{ $sc.content }}
+      </div>
+      {{ end }}
+    {{ end }}
+    </div>
+  </div>
+{{ end }}
+
+<div class="pam-footnote">
+  <p>All investment advisory services are offered through Eagle Strategies LLC, a registered investment adviser. All investments involve risk, including the potential loss of principal.  </p>
+</div>

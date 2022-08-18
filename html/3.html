@@ -1,0 +1,48 @@
+---
+{
+  "title": "Personal Solutions",
+  "services": [
+    {
+      "title": "Estate Planning",
+      "content": "<p>A well-engineered estate conservation plan can help minimize tax liability and ensure that loved ones are protected. We will work with you and your advisors to assess the impact of state and federal taxes on your estate and suggest strategies to help minimize those taxes while meeting your family’s needs.  We do not provide tax advice.  Please consult with your own advisors for tax advise.</p>"
+    },
+    {
+      "title": "Asset Protection",
+      "content": "<p>There are numerous financial strategies and retirement income strategies that can help you accumulate assets for the future, protect your business and personal assets from liabilities, and safeguard asset transfer to children and grandchildren. We can help you figure out what the right course of action is for your specific situation and objectives.</p>"
+    },
+    {
+      "title": "Charitable Planning",
+      "content": "<p>Charitable giving allows you to support the organizations and causes that matter to you, while often providing immediate income streams and reducing your tax burden. Numerous charitable giving strategies exist, and we can help you design and execute a charitable giving strategy that is in alignment with your personal and philanthropic goals. Please seek tax advice from your own tax advisors.</p>"
+    },
+    {
+      "title": "Disability and Extended Care Needs",
+      "content": "<p>To execute a sound retirement strategy, asset and income protection are a must. Designing a strategy that accounts for costs for extended periods of care and disability insurance can help create the necessary balance in a portfolio to ensure stability and protection of assets.</p>"
+    },
+    {
+      "title": "401(k) and IRA Rollovers",
+      "content": "<p>When you leave a job or retire, you have a decision to make regarding your 401(k) money. While leaving those assets in the former employer's plan is an option, a rollover can be a consideration. Working with your tax advisor, we can help you determine the right course of action for you. This may include: leaving the funds in your existing plan, if permitted, rolling them into your new employer's plan, if one is available and rollovers are permitted, rolling them over to an Individual Retirement Account (IRA), or taking a cash distribution. Each choice offers advantages and disadvantages, depending on your specific needs, personal circumstances and the retirement plans, such as the desired investment options and services, applicable fees, expenses, and withdrawal options, as well as the required minimum distributions (RMDs) and tax treatment of the applicable options. </p><p class=\"pam-footnote\">We do not offer tax advice. Please consult your tax advisor regarding your personal situation.</p>"
+    },
+    {
+      "title": "Wealth Management",
+      "content": "<p>Through Eagle Strategies LLC, a wholly owned subsidiary of New York Life Insurance Company, you can work with us to guide you in planning for tomorrow’s needs today while preserving your current cash flow. Based on your goals, financial situation, risk tolerance, and investment time horizon, together we can formulate an investment solution to help you achieve all of your short- and long-term wealth management needs. Eagle Strategies incorporates a wide range of thoroughly vetted third-party investment managers who bring specialized expertise in separately managed stock and bond portfolios, and mutual funds, while providing access to third-party wealth management programs. Every investment manager on the platform undergoes a rigorous due diligence process and is monitored closely to ensure they continue to meet our exacting standards. We are, and continue to be committed, to building enduring relationships that help you achieve your financial goals.</p>"
+    },
+    {
+      "title": "Financial Planning",
+      "content": "<p>Every successful journey starts with a roadmap.  You have dreams for yourself, your family, and perhaps a family business.  Whether your focus is on protection planning, preparing for retirement, funding higher education, caring for aging parents or a special needs child, transitioning a business, or creating a legacy for your heirs or the charitable causes you care about—a solid plan is the first step in any financial endeavor. Through Eagle Strategies LLC, we provide personalized financial planning services that take our clients’ overall financial circumstances into consideration. We employ a simple yet effective multi-step planning process to design and deliver a plan based on our clients’ needs and personal preferences.  We work diligently with each client to identify and prioritize their goals, explore options, establish effective strategies, construct and execute a plan. Eagle Strategies also regularly assesses the performance of each financial plan and makes adjustments as needed---providing a truly personalized and nimble approach to financial planning.</p>"
+    }
+  ]
+}
+---
+<div class="pam-section no-border mb-100">
+  <p>{{ if .site.dba }}{{ .site.dba }}{{ else }}<span style="color: red">Set the DBA Name</span>{{ end }}  provides individuals and families with innovative, cutting-edge products and services to help them grow, protect, and conserve their wealth through all stages in life. Taking into account your needs, goals, and tolerance for risk, we will work with you to bring clarity to what you want to achieve and how to get there. Some of our key services are detailed below.</p>
+</div>
+{{ range $i, $s := .page.services }}
+  <div class="services-section mb-50">
+    <div class="services-title-container">
+      <h2>{{ $s.title }}</h2>
+    </div>
+    <div class="services-content-container">
+      {{ $s.content }}
+    </div>
+  </div>
+{{ end }}

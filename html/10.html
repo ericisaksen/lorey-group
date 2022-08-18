@@ -1,0 +1,35 @@
+---
+{
+  "title": "Get in Touch"
+}
+---
+<div class="pam-section" style="border-bottom: 0;">
+  <div class="pam-flex jc">
+    <div class="pam-large-4 pam-columns address-container">
+      <div>
+        <i class="lmg-fas lmg-fa-map-marker-alt"><label>.</label></i>
+        <h2>Let's Meet</h2>
+        <p>{{ .site.address.address_line_1 }}<br/>
+          {{ if .site.address.address_line_2 }}{{ .site.address.address_line_2 }} <br/>{{ end }}
+          {{ .site.address.city }}, {{ .site.address.state}} {{ .site.address.zip }}</p>
+      </div>
+    </div>
+    <div class="pam-large-4 pam-columns address-container">
+      <div>
+        <i class="lmg-fas lmg-fa-comments"><label>.</label></i>
+        <h2>Let's Talk</h2>
+        <p>Call Us: <a href="tel:{{ .site.phone }}">{{ .site.phone }}</a><br/>
+          <a href="mailto:{{ .site.email }}">{{ .site.email }}</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pam-section">
+  <div class="pam-flex jc">
+    <div class="pam-large-12 pam-columns">
+      <div class="pam-map-wrapper">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.051853145053!2d-93.7356068!3d32.4177691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86312cc8e34ac3b5%3A0x45114e3706d62291!2s405%20Ashley%20Ridge%20Blvd%2C%20Shreveport%2C%20LA%2071106!5e0!3m2!1sen!2sus!4v1660767783795!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</div>

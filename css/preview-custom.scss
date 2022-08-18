@@ -1,0 +1,35 @@
+/*!
+ *
+ * Copyright (c) 2020 Grayhorse Enterprises, LLC
+ * All Rights Reserved.
+ *
+ * Created by Lawton Marketing Group
+ * Interested in our work? Visit us at:
+ *
+ * http://lawtonmg.com
+ *
+ */
+
+// CSS imports
+@import url('//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
+@import url('//primeagentmarketing.s3.us-west-2.amazonaws.com/library/fontawesome/6.1.0/all.min.css');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap');
+// Local settings
+$font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-serif: 'Playfair Display', sans-serif;
+
+$primary: #234960;
+$secondary: #4ebdff;
+$footerbg: #1a1a1a;
+
+// Bourbon mixins
+@import "bourbon/bourbon";
+// Framework library
+@import "framework/framework";
+
+// Include layout styles
+@import "layout";
+// Include content styles
+@import "content";

@@ -1,0 +1,60 @@
+---
+{
+  "title": "Meet Our Team"
+}
+---
+<div class="pam-section">
+  <div class="pam-flex team-container">
+    {{ range $i, $t := .site.team }}
+    <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+      <div class="headshot-container">
+        <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
+      </div>
+      <div class="team-meta">
+        <h2 class="team-name">{{ if $t.name }}{{ $t.name }}{{ else }}Insert Name{{ end }}</h2>
+        <p><a href="#" class="pam-button" data-popup="bio-{{ $i }}">Read Bio</a></p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+<div class="pam-section">
+  <div class="pam-flex ai">
+    <div class="pam-large-5 pam-columns">
+      <div class="pam-video-wrapper">
+        <iframe src="//player.vimeo.com/video/239511986" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div class="pam-large-7 pam-columns">
+      <p>The Nautilus Group<sup>&reg;</sup> is an exclusive resource and service of New York Life Insurance Company accessible to Member Agents working with affluent, high-net-worth and business owner clients. Nautilus provides a range of consultative services and technical case design to support its Member Agents in presenting estate, business, charitable, insurance, and retirement strategies to their clients and their clients’ advisors in these key areas: Family Protection, Estate and Legacy Planning, Business Succession and Exit Planning, Executive Benefits, and Philanthropy.</p>
+      <p>Since every client has unique requirements, The Nautilus Group<sup>&reg;</sup> staff and its Member Agents employ an individualized case development strategy, working on a team basis with the clients’ professional advisors.</p>
+    </div>
+    <div class="pam-large-12 pam-columns">
+      <p>Member Agents of The Nautilus Group<sup>&reg;</sup>, through their expertise and commitment to this team approach, can provide resources, services, and solutions that help their clients work with their own professional advisors to attain clarity on their financial situation and to also help achieve their business and estate planning objectives.</p>
+      <p>This consultative process fosters an understanding between the client, the Nautilus Member Agent, and the client's circle of advisors. Working hand in hand with the Nautilus staff, Member Agents present their clients with state-of-the-art planning strategies and customized case analyses designed to meet the client’s complex objectives. The one-on-one case design process used by Nautilus is tailored to the unique requirements of each client, achieving a better understanding of the complex needs and goals of each individual.</p>
+      <p>The Nautilus Group<sup>&reg;</sup> is located in Dallas, Texas, and is staffed by an elite team of professionals experienced in law, taxation, accounting, business, insurance, finance, and philanthropic planning. This team provides dedicated support for Nautilus Member Agents, an elite group of experienced insurance and financial industry leaders, firmly committed to a team approach concept.</p>
+      <p class="pam-footnote">The Nautilus Group<sup>&reg;</sup> is a service of New York Life Insurance Company. Neither The Nautilus Group<sup>&reg;</sup>, its member agents, nor its staff provide tax, legal, or accounting advice. Clients are urged to seek the advice of their own professional advisors before implementing any planning strategies.</p>
+      <div id="widget-nautilus-feed"></div>
+      <script type="text/javascript" src="//assets.primeagentmarketing.com/widgets/nyl/thenautilusgroup/tng-feed/nautilus-feed-widget.js"></script>
+    </div>
+  </div>
+</div>
+{{ range $i, $t := .site.team }}
+  <div class="popup-container team-popup" data-popup-src="bio-{{$i}}">
+    <div class="pam-flex popup-team-container">
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
+        <img src="{{ file $t.headshot }}" alt="">
+      </div>
+      <div class="pam-medium-8 bio-side pam-columns valign-top bio">
+        <div class="bio-container">
+          <div class="popup-team-meta">
+            <h2>{{ $t.name }}</h2>
+          </div>
+          <div class="bio-content">
+            {{ $t.bio }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}

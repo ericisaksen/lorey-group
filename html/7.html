@@ -1,0 +1,168 @@
+---
+{
+  "title": "Our Clients",
+  "physicians": [
+    {
+      "bio": "<p>Dr. Wally Nawas grew up in Monroe, Louisiana. After graduating high school, he enlisted in the United States Air Force for four years. After his honorable discharge, Dr. Nawas obtained his Bachelor of Science degree from The University of Southern Mississippi where he received highest honors.</p><p>He returned to Louisiana to attend medical school at Louisiana State University Health Sciences Center at Shreveport. He then completed a one-year Internal Medicine internship as well as a three-year Ophthalmology residency at LSUHSC-Shreveport.</p><p>Dr. Nawas and his wife, Jennifer, reside in Bossier City. They have three children: Caroline, Jake, and Zach. Caroline is a 2008 graduate of Airline High School, a 2012 graduate of LSU Baton Rouge, and a 2014 graduate of University of Louisiana Lafayette. She and her husband, Joel, live in Lafayette with their son, Max. Jake is in Nashville pursuing his career in music both writing and singing. Zach attends Birmingham-Southern College in Alabama as an accounting major and plays on the school&rsquo;s lacrosse team.</p>",
+      "headshot": "nawas-family.jpg",
+      "name": "Dr. Wally Nawas",
+      "company": "Bossier Eye Institute"
+    },
+    {
+      "bio": "<p>Dr. Jason Milligan grew up in Bossier City and is fulfilling a dream of practicing medicine in his hometown. After graduating from Parkway High School, he obtained his bachelor&rsquo;s degree from The Louisiana Scholars&rsquo; College at Northwestern State University.</p><p>After he earned his M.D. from LSU Health Sciences Center in Shreveport, he also completed residency there and had the honor of serving as chief resident in the Department of Family Medicine.</p><p>Dr. Milligan chose the specialty of Family Medicine because of his love of getting to know and treat families across generations. He and his wife, Jenny, reside in Benton, Louisiana. They have two small boys: Jake and Jude.</p>",
+      "headshot": "milligan-family.jpg",
+      "name": "Dr. Jason Milligan",
+      "company": "Family Medicine"
+    },
+    {
+      "bio": "<p>Dr. Tharwat Ghattas was born in Menia, Egypt. He graduated from Cairo University Medical School before moving to the United States. He completed his medical training at the Louisiana State University Health Sciences Center.</p><p>He is the Chief Hospitalist at Highland Hospital in Shreveport. He met his wife, Irina in Shreveport and were married in Dubai in 2017. The recently welcomed a beautiful new son, Rafael.</p>",
+      "headshot": "ghattas-family.jpg",
+      "name": "Dr. Tharwat Ghattas",
+      "company": "Hospitalist Specialist"
+    }
+  ],
+  "business": [
+    {
+      "bio": "<p>Lifelong friends Trey Towns and Jered Ramsey founded Enviro Services in April of 2011 with a handful of employees to provide restoration services for the pipeline industry.</p><p>The company offers superior rental equipment for earth work, restoration materials and environmental control devices to return the earth to its natural state.</p><p>Since then, they have grown to 17 employees Louisiana and over 165 employees in various states.</p>",
+      "headshot": "enviro-logo-white.webp",
+      "name": "Enviro Services",
+      "logo": true
+    },
+    {
+      "bio": "<p>SBC Mechanical consistently delivers superior quality air conditioning and heating repair and installation services. As a locally owned and operated company, we thrive on our relationships with our customers and the community. We provide solutions for both residential and commercial. We always stand behind our work, done honestly, fairly, and with integrity, because we are the Shreveport-Bossier City air conditioning and heating professionals you can trust. Trey Allen-Owner.</p>",
+      "headshot": "sb-mechanical-white.webp",
+      "name": "SBC Mechanical",
+      "logo": true
+    },
+    {
+      "bio": "<p>Stuarts Inc is owned and operated by Jon and Kim Walton. Founded in 1975 by Richard Stuart as a copier and typewriter dealer.</p><p>Stuarts Inc has since evolved into a full-service managed print services company along with a sister company, TeamLogicIT, that provides managed network services.</p><p>Jon began at the company in January of 1996 and progressed throughout the ranks and now is the President. He brought his wife Kim into the company in 2008 where she uses her accounting background as the CFO.</p><p>Both Kim and Jon are heavily involved in the community with athletics and fundraising. Their interests include spending time with their kids and grandkids at their lake house.</p>",
+      "headshot": "stuarts-white.webp",
+      "name": "Stuart's Integrated Services",
+      "logo": true
+    },
+    {
+      "bio": "<p>Albritton Service Company was founded in 1982 by Dick Albritton. For almost 30 years the company has continually grown by offering excellent service and dedication to our customers. Jason Albritton, Dick&rsquo;s son, now owns and manages all operations of the business.</p><p>Albritton Service Company is a York Air Conditioning and Heating dealer specializing in the installation and servicing of all brands of air conditioning and heating systems.We specialize in all phases of Electrical repair, from changing receptacles to wiring new homes and buildings. We also repair refrigeration problems such as Walk in coolers, freezers, ice machine, etc.</p>",
+      "headshot": "albritton-service-company-updated.jpg",
+      "name": "Albritton Service Company"
+    },
+    {
+      "bio": "<p>Albritton Service Company was founded in 1982 by Dick Albritton. For almost 30 years the company has continually grown by offering excellent service and dedication to our customers. Jason Albritton, Dick&rsquo;s son, now owns and manages all operations of the business.</p><p>Albritton Service Company is a York Air Conditioning and Heating dealer specializing in the installation and servicing of all brands of air conditioning and heating systems.We specialize in all phases of Electrical repair, from changing receptacles to wiring new homes and buildings. We also repair refrigeration problems such as Walk in coolers, freezers, ice machine, etc.</p>",
+      "headshot": "andrew-flooring.png",
+      "name": "Andrews Flooring"
+    }
+  ],
+  "individuals": [
+    {
+      "bio": "<p>Will and Robin Mulhearn reside in Bossier City, LA with their 17-year-old daughter, Kailey. They have worked in the pharmaceutical sales industry for 15 years.</p><p>In their free time, they enjoy travel, exercise and watching Kailey participate with the Blue Angel&rsquo;s at Airline High School.</p>",
+      "headshot": "mulhearn-updated.jpg",
+      "name": "Will and Robin Mulhearn"
+    }
+  ]
+}
+---
+<div class="pam-section">
+  <h2 class="pam-text-center mb-40">Physicians</h2>
+  <div class="pam-flex team-container jc">
+    {{ range $i, $t := .page.physicians }}
+    <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+      <div class="headshot-container">
+        <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
+      </div>
+      <div class="team-meta alt">
+        <h2 class="team-name">{{ if $t.name }}{{ $t.name }}{{ else }}Insert Name{{ end }}</h2>
+        <p><a href="#" class="pam-button" data-popup="physicians-{{ $i }}">Read More</a></p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+</div>
+<div class="pam-section">
+  <h2 class="pam-text-center mb-40 mt-40">Business Owners</h2>
+  <div class="pam-flex team-container jc">
+    {{ range $i, $t := .page.business }}
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+        <div class="headshot-container {{ if $t.logo }}is-logo{{end}}">
+          <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
+        </div>
+        <div class="team-meta alt">
+          <h2 class="team-name">{{ if $t.name }}{{ $t.name }}{{ else }}Insert Name{{ end }}</h2>
+          <p><a href="#" class="pam-button" data-popup="business-{{ $i }}">Read More</a></p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+<div class="pam-section">
+  <h2 class="pam-text-center mb-40 mt-40">Individuals</h2>
+  <div class="pam-flex team-container jc">
+    {{ range $i, $t := .page.individuals }}
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+        <div class="headshot-container">
+          <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
+        </div>
+        <div class="team-meta alt">
+          <h2 class="team-name">{{ if $t.name }}{{ $t.name }}{{ else }}Insert Name{{ end }}</h2>
+          <p><a href="#" class="pam-button" data-popup="individuals-{{ $i }}">Read More</a></p>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ range $i, $t := .page.physicians }}
+  <div class="popup-container team-popup" data-popup-src="physicians-{{$i}}">
+    <div class="pam-flex popup-team-container">
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
+        <img src="{{ file $t.headshot }}" alt="">
+      </div>
+      <div class="pam-medium-8 bio-side pam-columns valign-top bio">
+        <div class="bio-container">
+          <div class="popup-team-meta">
+            <h2>{{ $t.name }}</h2>
+          </div>
+          <div class="bio-content">
+            {{ $t.bio }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+{{ range $i, $t := .page.business }}
+  <div class="popup-container team-popup" data-popup-src="business-{{$i}}">
+    <div class="pam-flex popup-team-container">
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
+        <img src="{{ file $t.headshot }}" alt="">
+      </div>
+      <div class="pam-medium-8 bio-side pam-columns valign-top bio">
+        <div class="bio-container">
+          <div class="popup-team-meta">
+            <h2>{{ $t.name }}</h2>
+          </div>
+          <div class="bio-content">
+            {{ $t.bio }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
+{{ range $i, $t := .page.individuals }}
+  <div class="popup-container team-popup" data-popup-src="individuals-{{$i}}">
+    <div class="pam-flex popup-team-container">
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
+        <img src="{{ file $t.headshot }}" alt="">
+      </div>
+      <div class="pam-medium-8 bio-side pam-columns valign-top bio">
+        <div class="bio-container">
+          <div class="popup-team-meta">
+            <h2>{{ $t.name }}</h2>
+          </div>
+          <div class="bio-content">
+            {{ $t.bio }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{ end }}
