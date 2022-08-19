@@ -13,13 +13,14 @@
 // CSS imports
 @import url('//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css');
 @import url('//primeagentmarketing.s3.us-west-2.amazonaws.com/library/fontawesome/6.1.0/all.min.css');
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+@import url("https://use.typekit.net/gtn8fen.css");
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&display=swap');
 
 // Local settings
-$font-family-sans-serif: 'Montserrat', sans-serif;
-$font-family-serif: 'Playfair Display', sans-serif;
+$font-family-sans-serif: 'futura-pt', sans-serif;
+$font-family-serif: 'EB Garamond', sans-serif;
 
 $primary: #234960;
 $secondary: #4ebdff;

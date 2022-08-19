@@ -108,19 +108,6 @@
 			{
 				"sub_nav": [
 					{
-						"title": "Get in Touch",
-						"url": ".10.htm"
-					},
-					{
-						"title": "Schedule a Meeting",
-						"url": ".13.htm"
-					}
-				],
-				"title": "Contact"
-			},
-			{
-				"sub_nav": [
-					{
 						"blank": true,
 						"title": "eMoney",
 						"url": "https://wealth.emaplan.com/nylife/SignIn?nylife"
