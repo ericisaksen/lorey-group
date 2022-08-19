@@ -33,15 +33,15 @@
   ]
 }
 ---
-<div class="pam-section no-border mb-100">
+<div class="pam-section no-border mb-100" data-ani="fadeInUp">
   <p>{{ if .site.dba }}{{ .site.dba }}{{ else }}<span style="color: red">Set the DBA Name</span>{{ end }}  provides individuals and families with innovative, cutting-edge products and services to help them grow, protect, and conserve their wealth through all stages in life. Taking into account your needs, goals, and tolerance for risk, we will work with you to bring clarity to what you want to achieve and how to get there. Some of our key services are detailed below.</p>
 </div>
 {{ range $i, $s := .page.services }}
   <div class="services-section mb-50">
-    <div class="services-title-container">
+    <div class="services-title-container" data-ani="fadeInUp">
       <h2>{{ $s.title }}</h2>
     </div>
-    <div class="services-content-container">
+    <div class="services-content-container" data-ani="fadeInUp">
       {{ $s.content }}
     </div>
   </div>

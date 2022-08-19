@@ -31,15 +31,15 @@
 }
 ---
 <div class="pam-section no-border mb-100">
-  <p>Eagle Strategies LLC, is a Registered Investment Adviser and an indirect, wholly owned subsidiary of New York Life Insurance Company, and is a provider of holistic investment advisory and financial planning services. Our financial advisors leverage Eagle’s sophisticated wealth management platform, comprised of many of today’s leading investment managers, to design customized investment solutions to help address their clients’ unique investment objectives and risk tolerance levels.  The breadth of investment knowledge of our Financial Advisors, coupled with the support of Eagle’s diverse team of investment experts, allows them to provide the continuous financial guidance needed to help clients achieve long-term financial success.</p>
+  <p data-ani="fadeInUp">Eagle Strategies LLC, is a Registered Investment Adviser and an indirect, wholly owned subsidiary of New York Life Insurance Company, and is a provider of holistic investment advisory and financial planning services. Our financial advisors leverage Eagle’s sophisticated wealth management platform, comprised of many of today’s leading investment managers, to design customized investment solutions to help address their clients’ unique investment objectives and risk tolerance levels.  The breadth of investment knowledge of our Financial Advisors, coupled with the support of Eagle’s diverse team of investment experts, allows them to provide the continuous financial guidance needed to help clients achieve long-term financial success.</p>
 </div>
 
 {{ range $i, $t := .page.topSec }}
   <div class="services-section mb-50">
-    <div class="services-title-container">
+    <div class="services-title-container" data-ani="fadeInUp">
       <h2>{{ $t.title }}</h2>
     </div>
-    <div class="services-content-container">
+    <div class="services-content-container" data-ani="fadeInUp">
       {{ $t.content }}
       {{ if $t.sub_content }}
       {{ range $i, $sc := $t.sub_content }}

@@ -46,7 +46,7 @@
       "name": "Albritton Service Company"
     },
     {
-      "bio": "<p>Albritton Service Company was founded in 1982 by Dick Albritton. For almost 30 years the company has continually grown by offering excellent service and dedication to our customers. Jason Albritton, Dick&rsquo;s son, now owns and manages all operations of the business.</p><p>Albritton Service Company is a York Air Conditioning and Heating dealer specializing in the installation and servicing of all brands of air conditioning and heating systems.We specialize in all phases of Electrical repair, from changing receptacles to wiring new homes and buildings. We also repair refrigeration problems such as Walk in coolers, freezers, ice machine, etc.</p>",
+      "bio": "<p>Bill and Brenda Andrews founded Andrews Flooring, LLC in 2000, having 26 years of combined experience in the flooring industry, with a vision of serving the local residential and commercial flooring market.</p><p>They have strong customer relationships in the education, gaming, property management, and healthcare industries. They have built these relationships by putting the needs of their customer's first. They have a skilled, dedicated staff in place to satisfy the demands of their customer base.</p><p>In their spare time they enjoy living life to its fullest.</p>",
       "headshot": "andrew-flooring.png",
       "name": "Andrews Flooring"
     }
@@ -61,10 +61,10 @@
 }
 ---
 <div class="pam-section">
-  <h2 class="pam-text-center mb-40">Physicians</h2>
+  <h2 class="pam-text-center mb-40 animated fadeInUp">Physicians</h2>
   <div class="pam-flex team-container jc">
     {{ range $i, $t := .page.physicians }}
-    <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+    <div class="pam-medium-4 pam-columns valign-top pam-text-center animated fadeInUp">
       <div class="headshot-container">
         <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
       </div>
@@ -77,10 +77,10 @@
   </div>
 </div>
 <div class="pam-section">
-  <h2 class="pam-text-center mb-40 mt-40">Business Owners</h2>
+  <h2 class="pam-text-center mb-40 mt-40" data-ani="fadeInUp">Business Owners</h2>
   <div class="pam-flex team-container jc">
     {{ range $i, $t := .page.business }}
-      <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center" data-ani="fadeInUp">
         <div class="headshot-container {{ if $t.logo }}is-logo{{end}}">
           <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
         </div>
@@ -93,10 +93,10 @@
   </div>
 </div>
 <div class="pam-section">
-  <h2 class="pam-text-center mb-40 mt-40">Individuals</h2>
+  <h2 class="pam-text-center mb-40 mt-40" data-ani="fadeInUp">Individuals</h2>
   <div class="pam-flex team-container jc">
     {{ range $i, $t := .page.individuals }}
-      <div class="pam-medium-4 pam-columns valign-top pam-text-center">
+      <div class="pam-medium-4 pam-columns valign-top pam-text-center" data-ani="fadeInUp">
         <div class="headshot-container">
           <img src="{{ if $t.headshot }}{{ file $t.headshot }}{{ else }}https://via.placeholder.com/250x300{{ end }}" alt="Photo of {{ $t.name }}" />
         </div>
@@ -111,7 +111,7 @@
 
 {{ range $i, $t := .page.physicians }}
   <div class="popup-container team-popup" data-popup-src="physicians-{{$i}}">
-    <div class="pam-flex popup-team-container">
+    <div class="pam-flex popup-team-container ai">
       <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
         <img src="{{ file $t.headshot }}" alt="">
       </div>
@@ -130,7 +130,7 @@
 {{ end }}
 {{ range $i, $t := .page.business }}
   <div class="popup-container team-popup" data-popup-src="business-{{$i}}">
-    <div class="pam-flex popup-team-container">
+    <div class="pam-flex popup-team-container ai">
       <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
         <img src="{{ file $t.headshot }}" alt="">
       </div>
@@ -149,7 +149,7 @@
 {{ end }}
 {{ range $i, $t := .page.individuals }}
   <div class="popup-container team-popup" data-popup-src="individuals-{{$i}}">
-    <div class="pam-flex popup-team-container">
+    <div class="pam-flex popup-team-container ai">
       <div class="pam-medium-4 pam-columns valign-top pam-text-center popup-headshot-container">
         <img src="{{ file $t.headshot }}" alt="">
       </div>

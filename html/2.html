@@ -26,14 +26,14 @@
 }
 ---
 <div class="pam-section no-border mb-100">
-  <p>Here at {{ if .site.dba }}{{ .site.dba }}{{ else }}<span style="color: red">Set the DBA Name</span>{{ end }}, we offer a wide array of services to help business owners address their financial needs at every stage of the business life cycle. Taking into account their personal values and financial goals, we create and execute customized strategies to help entrepreneurs meet their objectives. Some of our key services are detailed below.</p>
+  <p data-ani="fadeInUp">Here at {{ if .site.dba }}{{ .site.dba }}{{ else }}<span style="color: red">Set the DBA Name</span>{{ end }}, we offer a wide array of services to help business owners address their financial needs at every stage of the business life cycle. Taking into account their personal values and financial goals, we create and execute customized strategies to help entrepreneurs meet their objectives. Some of our key services are detailed below.</p>
 </div>
 {{ range $i, $s := .page.services }}
   <div class="services-section mb-50">
-    <div class="services-title-container">
+    <div class="services-title-container" data-ani="fadeInUp">
       <h2>{{ $s.title }}</h2>
     </div>
-    <div class="services-content-container">
+    <div class="services-content-container" data-ani="fadeInUp">
       {{ $s.content }}
     </div>
   </div>

@@ -36,11 +36,11 @@
   <div class="pam-large-12 pam-columns">
     {{ range $i, $s := .page.process }}
       <div class="pam-process-section{{ if $s.even }} is-even{{ end }}">
-        <div class="process-title-container">
+        <div class="process-title-container" data-ani="fadeInUp">
           <i class="lmg-fal lmg-fa-{{ $s.icon }}"><label>.</label></i>
           <h2>{{ $s.title }}</h2>
         </div>
-        <div class="process-content-container">
+        <div class="process-content-container" data-ani="fadeInUp">
           {{ $s.content }}
         </div>
       </div>

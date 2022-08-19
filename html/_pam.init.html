@@ -44,7 +44,7 @@
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: target.offset().top - 103
+            scrollTop: target.offset().top - 138
           }, 1000);
           return false;
         }
@@ -52,7 +52,7 @@
     });
     var animateMe = function(){
       $('[data-ani]').each(function(i){
-        var bottom_of_object = $(this).offset().top + ($(this).outerHeight() * .5);
+        var bottom_of_object = $(this).offset().top + ($(this).outerHeight() * .25);
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         /* If the object is completely visible in the window, fade it it */
         if( bottom_of_window > bottom_of_object ){
